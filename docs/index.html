@@ -1,10 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style type="text/css">
+        :root {
+            --color-black: #000000;
+            --color-orange: #fe2e01;
+            --color-white: #ffffff;
+            --primary: pink;
+        }
+
+        body {
+            background-color: var(--color-black);
+            color: var(--color-white);
+        }
+
+        a {
+            color: var(--color-orange);
+        }
+
+        .heading {
+            color: var(--color-orange);
+        }
+
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>coalist</title>
 </head>
 <body>
-Hello, we are coalist!
+
+<section>
+
+    <h1 class="heading display-4 text-center mx-4">Hello world!</h1>
+
+    <!-- Animation -->
+    <div class="embed-responsive embed-responsive-1by1">
+        <!-- TODO crop video to make aspect-ratio 1:1; adjust width/height -->
+        <video width="1440" height="900" autoplay="autoplay" muted="muted" playsinline="playsinline">
+            <source src="assets/mous.mp4" type="video/mp4">
+            <!-- TODO insert meaningful alternative here whe no video -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <!-- Coming soon message -->
+    <div class="d-flex flex-column justify-content-center align-items-center mx-4">
+        <p class="lead">We are coalist, a team of IT specialist based in Zürich.</p>
+        <p>We are building our site, but you can reach us here in the meantime: <a href="mailto:hello@coalist.ch?">hello@coalist.ch</a></p>
+    </div>
+
+
+</section>
 </body>
 </html>
