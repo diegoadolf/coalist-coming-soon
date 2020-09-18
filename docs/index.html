@@ -29,6 +29,10 @@
             color: var(--color-orange);
         }
 
+        .logo-max-width {
+            max-width: 500px;
+        }
+
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Ubuntu', sans-serif;
         }
@@ -41,18 +45,12 @@
             font-weight: 500;  /* Medium */
         }
 
-
         body, p {
             font-family: 'Raleway', sans-serif;
             font-weight: 400;  /* Regular */
         }
 
-
-
-
     </style>
-
-    <!-- TODO load Ubunto Raleway fonts and set styles for fronts-->
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -75,12 +73,11 @@
     <h1 class="heading text-center mx-4">Hello world!</h1>
 
     <!-- Animation -->
-    <div class="embed-responsive embed-responsive-1by1">
-        <!-- TODO crop video to make aspect-ratio 1:1; adjust width/height -->
-        <video width="1440" height="900" autoplay="autoplay" muted="muted" playsinline="playsinline">
-            <source src="assets/mous.mp4" type="video/mp4">
-            <!-- TODO insert meaningful alternative here whe no video -->
-            Your browser does not support the video tag.
+    <div class="embed-responsive embed-responsive-1by1 logo-max-width mx-auto">
+        <video class="embed-responsive-item" width="500" height="500" autoplay="autoplay" muted="muted" playsinline="playsinline">
+            <source src="assets/animated-logo.mp4" type="video/mp4">
+            <source src="assets/animated-logo.ogg" type="video/ogg">
+            <img src="assets/logo3.svg" class="img-fluid w-100 mx-auto d-block logo-max-width" alt="coalist logo">
         </video>
     </div>
 
