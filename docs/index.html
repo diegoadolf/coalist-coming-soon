@@ -5,6 +5,9 @@
     <!-- Fonts: Ubuntu Bold & Medium, Raleway Regular & Bold -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
 
+    <!-- Fonts: Pacifico (coming soon) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -33,6 +36,11 @@
         }
 
         .heading {
+            color: var(--color-white);
+            font-size: 4rem;
+        }
+
+        .heading span {
             color: var(--color-orange);
         }
 
@@ -55,6 +63,32 @@
         body, p {
             font-family: 'Raleway', sans-serif;
             font-weight: 400;  /* Regular */
+            font-size: 20px;
+        }
+
+        header {
+            background: var(--color-white);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 64px;
+        }
+
+        header .coming-soon {
+            font-family: 'Pacifico', cursive;
+            color: var(--color-orange);
+        }
+
+        footer  {
+            padding: 50px;
+            background: var(--color-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
     </style>
@@ -71,33 +105,50 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <title>coalist</title>
+    <title>coalist - team of IT specialists based in Z&uuml;rich</title>
 </head>
 <body>
 
-<section>
+    <header>
+        <img src="assets/logo1.png" alt="coalist">
+        <h2 class="coming-soon">Coming soon...</h2>
+    </header>
 
-  <div>
-    <h1 class="heading text-center mx-4">Hello world!</h1>
+    <main>
+        <section>
 
-    <!-- Animation -->
-    <div class="embed-responsive embed-responsive-1by1 logo-max-width mx-auto">
-        <video class="embed-responsive-item" width="500" height="500" autoplay="autoplay" muted="muted" playsinline="playsinline">
-            <source src="assets/animated-logo.mp4" type="video/mp4">
-            <source src="assets/animated-logo.ogg" type="video/ogg">
-            <img src="assets/logo3.svg" class="img-fluid w-100 mx-auto d-block logo-max-width" alt="coalist logo">
-        </video>
-    </div>
+          <div>
 
+            <h1 class="heading text-center mx-4">We are the <span>coalist</span></h1>
+            <h2 class="text-center mx-4">A team of dedicated IT specialists and experts based in Z&uuml;rich</h2>
 
-    <!-- Coming soon message -->
-    <div class="d-flex flex-column justify-content-center align-items-center mx-4">
-        <p>We are coalist, a team of IT specialists based in Z&uuml;rich.</p>
-        <p>We are currently building our site, but in the meantime, you can reach us here: <a href="mailto:hello@coalist.ch">hello@coalist.ch</a></p>
-    </div>
-  </div>
+            <!-- Animation -->
+            <div class="embed-responsive embed-responsive-1by1 logo-max-width mx-auto">
+                <video class="embed-responsive-item" width="500" height="500" autoplay="autoplay" muted="muted" playsinline="playsinline">
+                    <source src="assets/animated-logo.mp4" type="video/mp4">
+                    <source src="assets/animated-logo.ogg" type="video/ogg">
+                    <img src="assets/logo3.svg" class="img-fluid w-100 mx-auto d-block logo-max-width" alt="coalist logo">
+                </video>
+            </div>
 
 
-</section>
+            <!-- Coming soon message -->
+            <div class="d-flex flex-column justify-content-center align-items-center mx-5">
+                <p class="text-center">Do not hesitate to reach us here at <a href="mailto:hello@coalist.ch">hello@coalist.ch</a><br>
+                    to discuss what kind of valuable expertise we could provide to help you make your project a success!</p>
+            </div>
+          </div>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <p class="m-0 p-0">© coalist <span id="year"></span></p>
+    </footer>
+    <script>
+        const year$ = document.querySelector('#year');
+        year$.textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
